@@ -1,0 +1,6 @@
+*.env*
+node_modules
+.DS_Store
+playwright-report
+blob-report
+test-results
