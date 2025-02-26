@@ -12,7 +12,7 @@ export class MicrosoftExcel {
 	readonly currentCellWrapper: Locator;
 
 	constructor(readonly page: Page) {
-		this.iframe = this.page.locator('iframe[name="WacFrame_Excel_0"]').contentFrame();
+		this.iframe = this.page.frameLocator('iframe[name="WacFrame_Excel_0"]');
 		this.currentCellWrapper = this.iframe.locator('#m_excelWebRenderer_ewaCtl_readoutElementWrapper');
 		this.txtCellInput = this.iframe.getByRole('combobox', { name: 'Name Box' });
 		this.btnCommitEdit = this.iframe.getByRole('button', { name: 'commit edit' });
@@ -40,7 +40,9 @@ export class MicrosoftExcel {
 	async typeFormula(formula: string) {
 		await this.txtFormulaBar.waitFor({ state: 'visible' });
 		await this.txtFormulaBar.click();
-		await this.page.keyboard.type(formula);
+		await this.page.keyboard.press('Control+A');
+		await this.page.keyboard.press('Delete');
+		await this.page.keyboard.type(formula, { delay: 50 });
 	}
 
 	async commitCellEdit() {
