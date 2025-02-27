@@ -1,0 +1,1 @@
+{"497df3f84496b392829a0987c648526c:5bd835b0d6b1d4ada3b9f0db936e82c8":{"statistic":{"failed":0,"broken":0,"skipped":0,"passed":1,"unknown":0,"total":1},"items":[{"uid":"b4d12b69a6ef2e47","reportUrl":"https://todx0.github.io/playwright-demo/8//#testresult/b4d12b69a6ef2e47","status":"passed","time":{"start":1740616805883,"stop":1740616827401,"duration":21518}}]}}
