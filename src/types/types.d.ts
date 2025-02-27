@@ -4,7 +4,7 @@ type Password = string;
 
 // Interfaces
 interface CustomFixture extends Config {
-	login: void;
+	login: () => Promise<void>;
 }
 
 interface Config {

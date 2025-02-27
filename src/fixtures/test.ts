@@ -8,6 +8,6 @@ export const test = base.extend<CustomFixture>({
 		const microsoftLogin = new MicrosoftLogin(page);
 		await page.goto('/');
 		await microsoftLogin.login(email, password);
-		await use();
+		await use(undefined);
 	},
 });
