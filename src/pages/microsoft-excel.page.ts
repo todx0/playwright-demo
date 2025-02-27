@@ -34,7 +34,7 @@ export class MicrosoftExcel {
 		await this.txtCellInput.waitFor({ state: 'visible' });
 		await this.txtCellInput.click();
 		await this.txtCellInput.fill(cell);
-		await this.page.keyboard.press('Enter');
+		await this.page.keyboard.press('Enter', { delay: 100 });
 	}
 
 	async typeFormula(formula: string) {

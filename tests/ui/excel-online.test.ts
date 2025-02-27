@@ -18,8 +18,6 @@ test.describe('Excel Online', () => {
 		await excel.commitCellEdit();
 		await excel.selectCell(cell);
 
-		await page.waitForTimeout(5000);
-
 		const cellContent = await excel.getActiveCellContent();
 
 		expect(cellContent).toBe(currentDate);
