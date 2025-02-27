@@ -1,0 +1,2 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","20345","TODAY() Function test","chromium","Thu Feb 27 00:44:49 GMT 2025","passed","Thu Feb 27 00:45:09 GMT 2025","Excel Online","ui/excel-online.test.ts","",""
