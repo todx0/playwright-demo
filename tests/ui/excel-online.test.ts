@@ -17,7 +17,6 @@ test.describe('Excel Online', () => {
 		await excel.typeFormula('=TODAY()');
 		await excel.commitCellEdit();
 		await excel.selectCell(cell);
-
 		const cellContent = await excel.getActiveCellContent();
 
 		expect(cellContent).toBe(currentDate);
