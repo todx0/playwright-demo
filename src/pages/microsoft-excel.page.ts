@@ -16,13 +16,8 @@ export class MicrosoftExcel {
 		this.currentCellWrapper = this.iframe.locator('#m_excelWebRenderer_ewaCtl_readoutElementWrapper');
 		this.txtCellInput = this.iframe.getByRole('combobox', { name: 'Name Box' });
 		this.btnCommitEdit = this.iframe.getByRole('button', { name: 'commit edit' });
-
+		this.txtFormulaBar = this.iframe.getByRole('textbox', { name: 'formula bar' }).locator('div');
 		this.btnCreateBlankWorkbook = this.page.getByTestId('0300');
-		this.txtFormulaBar = this.page
-			.locator('iframe[name="WacFrame_Excel_0"]')
-			.contentFrame()
-			.getByRole('textbox', { name: 'formula bar' })
-			.locator('div');
 	}
 
 	async createBlankWorkbook() {
